@@ -49,7 +49,15 @@ async function sendMessage() {
     if (file) formData.append('image', file);
 
     try {
-        const response = await fetch('/chat', { method: 'POST', body: formData });
+
+const response = await fetch('/chat', {
+    method: 'POST',
+});
+
+
+
+
+
         const data = await response.json();
         
         typingIndicator.style.display = 'none';
